@@ -1,0 +1,84 @@
+.listCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--fs33);
+}
+
+.more {
+  font-size: var(--fs12);
+  transition: color 0.3s;
+}
+
+.more:hover {
+  color: var(--dark-colors-accent-dark);
+  font-weight: bold;
+}
+
+.more::after {
+  content: '\F138';
+  font-family: 'bootstrap-icons';
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.more:hover::after {
+  transform: translateX(5px);
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  gap: var(--fs20);
+}
+
+.grid4 {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.grid6 {
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+
+.grid9 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+/* 스켈레톤 관련 UI */
+.img {
+  border-radius: var(--fs16);
+  padding-top: 100%;
+}
+
+.title {
+  border-radius: var(--fs8);
+  margin-top: var(--fs8);
+  width: 80%;
+}
+
+.price {
+  border-radius: var(--fs8);
+  margin-top: var(--fs8);
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+
+  .viewControls i {
+    display: none;
+  }
+}
+
+.viewControls {
+  display: flex;
+  gap: var(--fs8);
+}
+
+.viewControls i {
+  cursor: pointer;
+}
