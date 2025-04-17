@@ -1,0 +1,17 @@
+/* 스켈레톤 관련 UI */
+.img {
+  border-radius: var(--fs16);
+  padding-top: 100%;
+}
+
+.title {
+  border-radius: var(--fs8);
+  margin-top: var(--fs8);
+  width: 80%;
+}
+
+.price {
+  border-radius: var(--fs8);
+  margin-top: var(--fs8);
+  width: 40%;
+}
