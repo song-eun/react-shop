@@ -59,7 +59,7 @@ main > * {
 }
 
 .counterArea {
-  background-color: #dcdbdb;
+  background-color: var(--light-colors-light-gray-light);
   border-radius: var(--fs8);
 }
 
@@ -79,16 +79,19 @@ main > * {
 .addBtn {
   flex: 1;
   border-radius: var(--fs8);
-  border: 1px solid var(--dark-colors-accent-dark);
+  border: 1px solid var(--light-colors-black-light);
+  background-color: var(--light-colors-white-light);
 }
 
 .tabBtns {
   display: flex;
-  gap: var(--fs12);
+  gap: var(--fs33);
+  border-bottom: 2px solid var(--light-colors-light-gray-light);
 }
 
 .tabBtns button {
-  padding: var(--fs16) var(--fs20);
+  /* padding: var(--fs16) var(--fs20); */
+  padding-bottom: var(--fs16);
   font-size: var(--fs20);
   border: none;
   color: var(--light-colors-dark-gray-light);

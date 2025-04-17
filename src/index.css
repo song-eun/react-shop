@@ -53,7 +53,7 @@
   line-height: 1.6;
 }
 body {
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
 }
 
 main,
@@ -83,6 +83,7 @@ a {
   overflow: hidden;
   font-size: var(--fs20);
   color: transparent;
+  background-color: var(--light-colors-gray-light);
 }
 
 .skeleton::after {
