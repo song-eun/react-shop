@@ -5,7 +5,7 @@ import Default from './layout/Default'
 import NotFound from './pages/NotFound'
 import Loading from './components/Loading'
 import DetailPage from './pages/DetailPage'
-
+import { detailPageLoader } from './loaders/productsLoaders'
 // import MainPage from "./pages/MainPage"
 const MainPage = lazy(() => import('./pages/MainPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
@@ -39,19 +39,16 @@ let router = createBrowserRouter([
         path: '/cart',
         element: <CartPage />,
       },
+      // {
+      //   path: '/detail/:productId',
+      //   element: <DetailPage />,
+      // },
       {
         path: '/detail/:productId',
         element: <DetailPage />,
+        loader: detailPageLoader,
       },
     ],
-  },
-  {
-    path: '*',
-    element: (
-      <Suspense fallback={<Loading />}>
-        <NotFound />
-      </Suspense>
-    ),
   },
 ])
 

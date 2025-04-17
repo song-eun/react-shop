@@ -1,12 +1,36 @@
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3000/products'
 
-export const getProductsData = async query => {
+export const getProductsByQuery = async query => {
   try {
-    const response = await axios.get(`${BASE_URL}/${query}`)
+    const response = await axios.get(`/api/products/?${query}`)
     return response.data
   } catch (error) {
     console.log(error)
     // throw error
   }
 }
+
+export const getProductById = async id => {
+  try {
+    const response = await axios.get(`/api/products/${id}`)
+    return response.data
+  } catch (error) {
+    console.log(error)
+    // throw error
+  }
+}
+
+// export const getProductByCategory = async (category, limit = 10) => {
+//   try {
+//     const response = await axios.get(`/api/products/`, {
+//       params: {
+//         category,
+//         _limit: limit,
+//       },
+//     })
+//     return response.data
+//   } catch (error) {
+//     console.log(error)
+//     return []
+//   }
+// }
