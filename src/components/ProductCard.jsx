@@ -8,11 +8,7 @@ const ProductCard = ({ data }) => {
       <div className={css.imgWrap}>
         <img src={`/public/img/${data.img}`} alt={data.title} />
         <span className={css.cate}>{data.category}</span>
-        {data.discount > 0 ? (
-          <span className={css.discount}>{`${data.discount}%`}</span>
-        ) : (
-          <span></span>
-        )}
+        {data.discount > 0 && <span className={css.discount}>{`${data.discount}%`}</span>}
       </div>
       <div className={css.textWrap}>
         <strong className={css.title}>{data.title}</strong>
