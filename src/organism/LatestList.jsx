@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import css from './LatestList.module.css'
 import ProductCard from '../components/ProductCard'
 import { getProductsData } from '../api/productsApi'
+import ProductCardSkeleton from '../components/ProductCardSkeleton'
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -53,9 +54,7 @@ const LatestList = () => {
         {loading
           ? Array.from({ length: listCount }).map((_, index) => (
               <li key={index}>
-                <div className={`skeleton ${css.img}`}></div>
-                <div className={`skeleton ${css.title}`}>타이틀</div>
-                <div className={`skeleton ${css.price}`}>가격</div>
+                <ProductCardSkeleton />
               </li>
             ))
           : products.map(item => (
