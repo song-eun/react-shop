@@ -4,14 +4,16 @@ import { lazy, Suspense } from 'react'
 import Default from './layout/Default'
 import NotFound from './pages/NotFound'
 import Loading from './components/Loading'
-import DetailPage from './pages/DetailPage'
 import { detailPageLoader } from './loaders/productsLoaders'
 // import MainPage from "./pages/MainPage"
+import DetailPage from './pages/DetailPage'
+
 const MainPage = lazy(() => import('./pages/MainPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ShopPage = lazy(() => import('./pages/ShopPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const CartPage = lazy(() => import('./pages/CartPage'))
+// const DetailPage = lazy(() => import('./pages/DetailPage'))
 
 let router = createBrowserRouter([
   {
