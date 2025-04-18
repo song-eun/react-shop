@@ -82,3 +82,13 @@ main > * {
   border: 1px solid var(--light-colors-black-light);
   background-color: var(--light-colors-white-light);
 }
+
+@media (max-width: 600px) {
+  .detailCon {
+    flex-direction: column;
+  }
+
+  .imgWrap {
+    width: 100%;
+  }
+}

@@ -111,3 +111,12 @@ a {
     transform: translateX(100%);
   }
 }
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: var(--fs16);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--dark-colors-accent-dark);
+}

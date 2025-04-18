@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import css from './DetailPage.module.css'
 import { formatCurrency } from '@/utils/features'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import ProductCard from '@/components/ProductCard'
+
 import DetailTabInfo from '@/organism/DetailTabInfo'
+import SimilarProducts from '@/organism/SimilarProducts'
 
 const DetailPage = () => {
   const { product, relatedProducts } = useLoaderData()
@@ -31,23 +31,7 @@ const DetailPage = () => {
         </div>
       </div>
       <DetailTabInfo />
-      <section className={css.relatedItems}>
-        <h2>Similar Items</h2>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          className={css.relatedSlider}
-        >
-          {relatedProducts.map(item => (
-            <SwiperSlide key={item.id}>
-              <ProductCard data={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
+      <SimilarProducts relatedProducts={relatedProducts} />
     </main>
   )
 }

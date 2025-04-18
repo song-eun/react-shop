@@ -1,0 +1,16 @@
+.con {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.con > * {
+  margin-bottom: 1rem;
+}
+
+.similarSlider {
+  overflow: visible;
+}
+
+.similarSlider > div:nth-of-type(2) {
+  bottom: -20px;
+}
