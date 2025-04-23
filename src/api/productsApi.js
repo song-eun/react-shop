@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const getProductsByQuery = async query => {
+export const getProductsData = async query => {
   try {
     const response = await axios.get(`/api/products/?${query}`)
     return response.data

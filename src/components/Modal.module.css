@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(-50px);
+  background-color: var(--dark-colors-white-dark);
+  transition:
+    transform 0.3s,
+    opacity 0.1s;
+  padding: var(--fs33);
+  border-radius: var(--fs16);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal.active .container {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.modal img {
+  width: 100px;
+}
+
+.productWrap {
+  display: flex;
+  gap: var(--fs8);
+  align-items: center;
+  margin-bottom: var(--fs12);
+}
+
+.info p {
+  margin-bottom: var(--fs8);
+}
+
+.info .title {
+  font-weight: bold;
+}
+
+.__inner button {
+  width: 100%;
+  padding: var(--fs12);
+  margin-top: var(--fs8);
+  background-color: var(--light-colors-white-light);
+  border: 1px solid var(--light-colors-black-light);
+  transition: 0.3s;
+}
+
+.__inner button:nth-of-type(1) {
+  background-color: var(--light-colors-black-light);
+  color: var(--light-colors-white-light);
+}
+
+.btnClose {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  background-color: transparent;
+  font-size: var(--fs26);
+}
+
+.btnClose:hover i {
+  color: var(--dark-colors-white-dark);
+}

@@ -38,20 +38,27 @@
   background-color: var(--dark-colors-accent-dark);
   color: var(--dark-colors-white-dark);
   padding: var(--fs8) var(--fs16);
-  border-radius: var(--fs33);
+  border-radius: var(--fs8);
 }
 
 .textWrap {
-  font-size: var(--fs20);
+  font-size: var(--fs16);
   display: flex;
   flex-direction: column;
   gap: var(--fs8);
-  padding: var(--fs16);
+  padding: var(--fs16) 0;
 }
 
 .price {
   color: var(--dark-colors-accent-dark);
   font-weight: bold;
+}
+
+.originalPrice {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-right: var(--fs8);
 }
 
 .btnGoDetail {

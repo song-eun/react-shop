@@ -78,6 +78,11 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 .skeleton {
   position: relative;
   overflow: hidden;

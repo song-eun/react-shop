@@ -35,3 +35,7 @@ export const throttle = (func, limit = 300) => {
     }
   }
 }
+
+export const getDiscountedPrice = (price, discount) => {
+  return Math.round(price * ((100 - discount) / 100))
+}

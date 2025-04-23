@@ -1,4 +1,4 @@
-import { getProductById, getProductsByQuery } from '@/api/productsApi'
+import { getProductById, getProductsData } from '@/api/productsApi'
 
 export const detailPageLoader = async ({ params }) => {
   try {
@@ -10,7 +10,7 @@ export const detailPageLoader = async ({ params }) => {
     }
 
     // 상품 ID의 카테고리 정보와 일치하는 상품들
-    const relatedProducts = await getProductsByQuery(`category=${product.category}&_limit=10`)
+    const relatedProducts = await getProductsData(`category=${product.category}&_limit=10`)
 
     return { product, relatedProducts }
   } catch (error) {

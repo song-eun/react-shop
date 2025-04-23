@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import css from './LatestList.module.css'
 import ProductCard from '../components/ProductCard'
-import { getProductsByQuery } from '../api/productsApi'
+import { getProductsData } from '../api/productsApi'
 import ProductCardSkeleton from '../components/ProductCardSkeleton'
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -22,7 +22,7 @@ const LatestList = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true)
-        const data = await getProductsByQuery(`category=new&_limit=${listCount}`)
+        const data = await getProductsData(`category=new&_limit=${listCount}`)
         await delay(1000)
         setProducts(data)
         setLoading(false)

@@ -7,7 +7,6 @@
 .tabBtns button {
   padding-bottom: var(--fs16);
   font-size: var(--fs20);
-  border: none;
   color: var(--light-colors-dark-gray-light);
   background-color: transparent;
   position: relative;

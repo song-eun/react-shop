@@ -38,15 +38,21 @@ main > * {
   color: var(--dark-colors-accent-dark);
 }
 
+.originalPrice {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-right: var(--fs8);
+}
+
 .discount {
-  font-size: var(--fs12);
   position: absolute;
   top: var(--fs20);
-  left: var(--fs20);
-  background-color: var(--light-colors-accent-light);
+  left: var(--fs16);
+  background-color: var(--dark-colors-accent-dark);
+  color: var(--dark-colors-white-dark);
+  padding: var(--fs8) var(--fs16);
   border-radius: var(--fs8);
-  padding: var(--fs8) var(--fs12);
-  color: var(--light-colors-white-light);
 }
 
 .category {
@@ -64,8 +70,6 @@ main > * {
 }
 
 .counterArea button {
-  border: none;
-  outline: none;
   padding: var(--fs12) var(--fs20);
   font-size: var(--fs16);
   background-color: transparent;
@@ -81,6 +85,12 @@ main > * {
   border-radius: var(--fs8);
   border: 1px solid var(--light-colors-black-light);
   background-color: var(--light-colors-white-light);
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background-color: var(--light-colors-black-light);
+  color: var(--light-colors-white-light);
 }
 
 @media (max-width: 600px) {
