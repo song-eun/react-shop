@@ -1,0 +1,11 @@
+.price {
+  color: var(--dark-colors-accent-dark);
+  font-weight: bold;
+}
+
+.originalPrice {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-right: var(--fs8);
+}

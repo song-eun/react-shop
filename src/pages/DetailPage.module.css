@@ -33,18 +33,6 @@ main > * {
   font-size: var(--fs26);
 }
 
-.price {
-  font-weight: bold;
-  color: var(--dark-colors-accent-dark);
-}
-
-.originalPrice {
-  color: #888;
-  text-decoration: line-through;
-  font-size: 0.9em;
-  margin-right: var(--fs8);
-}
-
 .discount {
   position: absolute;
   top: var(--fs20);

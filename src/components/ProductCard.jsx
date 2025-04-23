@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './ProductCard.module.css'
 import { Link } from 'react-router-dom'
-import { formatCurrency, getDiscountedPrice } from '../utils/features'
+import ProductPrice from './ProductPrice'
 const ProductCard = ({ data }) => {
   return (
     <div className={css.card}>
@@ -12,17 +12,7 @@ const ProductCard = ({ data }) => {
       </div>
       <div className={css.textWrap}>
         <strong className={css.title}>{data.title}</strong>
-
-        {data.discount > 0 ? (
-          <div>
-            <span className={css.originalPrice}>{formatCurrency(data.price)}</span>
-            <span className={css.price}>
-              {formatCurrency(getDiscountedPrice(data.price, data.discount))}
-            </span>
-          </div>
-        ) : (
-          <span className={css.price}>{formatCurrency(data.price)}</span>
-        )}
+        <ProductPrice price={data.price} discount={data.discount} />
       </div>
       <Link to={`/detail/${data.id}`} className={css.btnGoDetail}>
         상품 상세 페이지

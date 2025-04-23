@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import css from './DetailPage.module.css'
-import { formatCurrency, getDiscountedPrice } from '@/utils/features'
 
 import DetailTabInfo from '@/organism/DetailTabInfo'
 import SimilarProducts from '@/organism/SimilarProducts'
 import { addToCart } from '@/api/cartApi'
 import Modal from '@/components/Modal'
+import ProductPrice from '@/components/ProductPrice'
 
 const DetailPage = () => {
   const { product, relatedProducts } = useLoaderData()
@@ -63,16 +63,7 @@ const DetailPage = () => {
         </div>
         <div className={css.infoWrap}>
           <p className={css.title}>{product.title}</p>
-          {product.discount > 0 ? (
-            <div>
-              <span className={css.originalPrice}>{formatCurrency(product.price)}</span>
-              <span className={css.price}>
-                {formatCurrency(getDiscountedPrice(product.price, product.discount))}
-              </span>
-            </div>
-          ) : (
-            <p className={css.price}>{formatCurrency(product.price)}</p>
-          )}
+          <ProductPrice price={product.price} discount={product.discount} />
 
           <p className={css.category}>{product.category}</p>
           <div className={css.btnWrap}>
