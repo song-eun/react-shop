@@ -12,7 +12,7 @@ const ProductCard = ({ data }) => {
       </div>
       <div className={css.textWrap}>
         <strong className={css.title}>{data.title}</strong>
-        <ProductPrice price={data.price} discount={data.discount} />
+        <ProductPrice price={data.price} discount={data.discount} highlight={true} />
       </div>
       <Link to={`/detail/${data.id}`} className={css.btnGoDetail}>
         상품 상세 페이지

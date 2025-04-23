@@ -1,5 +1,4 @@
 .price {
-  color: var(--dark-colors-accent-dark);
   font-weight: bold;
 }
 
@@ -8,4 +7,8 @@
   text-decoration: line-through;
   font-size: 0.9em;
   margin-right: var(--fs8);
+}
+
+.highlight {
+  color: var(--dark-colors-accent-dark);
 }

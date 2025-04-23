@@ -57,7 +57,7 @@ const DetailPage = () => {
         </div>
         <div className={css.infoWrap}>
           <p className={css.title}>{product.title}</p>
-          <ProductPrice price={product.price} discount={product.discount} />
+          <ProductPrice price={product.price} discount={product.discount} highlight={true} />
 
           <p className={css.category}>{product.category}</p>
           <div className={css.btnWrap}>
