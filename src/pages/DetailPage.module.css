@@ -52,22 +52,6 @@ main > * {
   gap: var(--fs16);
 }
 
-.counterArea {
-  background-color: var(--light-colors-light-gray-light);
-  border-radius: var(--fs8);
-}
-
-.counterArea button {
-  padding: var(--fs12) var(--fs20);
-  font-size: var(--fs16);
-  background-color: transparent;
-}
-
-.counterArea span {
-  display: inline-block;
-  padding: var(--fs12);
-}
-
 .addBtn {
   flex: 1;
   border-radius: var(--fs8);

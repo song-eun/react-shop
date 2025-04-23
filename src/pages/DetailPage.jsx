@@ -7,18 +7,12 @@ import SimilarProducts from '@/organism/SimilarProducts'
 import { addToCart } from '@/api/cartApi'
 import Modal from '@/components/Modal'
 import ProductPrice from '@/components/ProductPrice'
+import ItemCounter from '@/components/ItemCounter'
 
 const DetailPage = () => {
   const { product, relatedProducts } = useLoaderData()
   const [count, setCount] = useState(1)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const decrease = () => {
-    setCount(prev => (prev > 1 ? prev - 1 : 1))
-  }
-  const increase = () => {
-    setCount(prev => prev + 1)
-  }
 
   const handleAddToCart = async () => {
     // 장바구니 상품을 추가 json-server 추가
@@ -67,11 +61,7 @@ const DetailPage = () => {
 
           <p className={css.category}>{product.category}</p>
           <div className={css.btnWrap}>
-            <div className={css.counterArea}>
-              <button onClick={decrease}>-</button>
-              <span>{count}</span>
-              <button onClick={increase}>+</button>
-            </div>
+            <ItemCounter count={count} setCount={setCount} />
             <button className={css.addBtn} onClick={handleAddToCart}>
               장바구니 담기
             </button>
